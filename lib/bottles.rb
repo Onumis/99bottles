@@ -17,8 +17,13 @@ class Bottles
   end
 
   def line2(num)
-    "Take one down and pass it around, "\
-      "#{pluralise('bottle', num)} of beer on the wall."
+    if num == 0
+      "Take it down and pass it around, "\
+        "no more bottles of beer on the wall."
+    else
+      "Take one down and pass it around, "\
+        "#{pluralise('bottle', num)} of beer on the wall."
+    end
   end
 
   def pluralise(string, count)
