@@ -5,6 +5,10 @@ class Bottles
     sing(previous, current)
   end
 
+  def verses(number1, number2)
+    verse(number1) + "\n" + verse(number2)
+  end
+
   private
 
   def sing(previous, current)
