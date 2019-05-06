@@ -12,14 +12,20 @@ class Bottles
   end
 
   def line1(num)
-    "#{pluralise('bottle', num)} of beer on the wall, "\
-      "#{pluralise('bottle', num)} of beer."
+    if num == 0
+      "No more bottles of beer on the wall, no more bottles of beer."
+    else
+      "#{pluralise('bottle', num)} of beer on the wall, "\
+        "#{pluralise('bottle', num)} of beer."
+    end
   end
 
   def line2(num)
     if num == 0
       "Take it down and pass it around, "\
         "no more bottles of beer on the wall."
+    elsif num < 0
+      "Go to the store and buy some more, 99 bottles of beer on the wall."
     else
       "Take one down and pass it around, "\
         "#{pluralise('bottle', num)} of beer on the wall."
