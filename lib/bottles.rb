@@ -5,8 +5,9 @@ class Bottles
     sing(previous, current)
   end
 
-  def verses(number1, number2)
-    verse(number1) + "\n" + verse(number2)
+  def verses(from_number, to_number)
+    (to_number..from_number).map { |number| verse(number) }
+                            .reverse.join("\n")
   end
 
   private
